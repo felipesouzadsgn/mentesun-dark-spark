@@ -1,13 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import { Header } from "../components/Header";
+import { Hero } from "../components/sections/Hero";
+import { Services } from "../components/sections/Services";
+import { Features } from "../components/sections/Features";
+import { Testimonials } from "../components/sections/Testimonials";
+import { CTA } from "../components/sections/CTA";
+import { Footer } from "../components/Footer";
+import { initScrollAnimation } from "../utils/scrollAnimation";
 
 const Index = () => {
+  useEffect(() => {
+    initScrollAnimation();
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <main className="min-h-screen flex flex-col">
+      <Header />
+      
+      <div className="flex-grow">
+        <Hero />
+        
+        <div className="reveal" data-delay="1">
+          <Services />
+        </div>
+        
+        <div className="reveal" data-delay="2">
+          <Features />
+        </div>
+        
+        <div className="reveal" data-delay="1">
+          <Testimonials />
+        </div>
+        
+        <div className="reveal" data-delay="2">
+          <CTA />
+        </div>
       </div>
-    </div>
+      
+      <Footer />
+    </main>
   );
 };
 
