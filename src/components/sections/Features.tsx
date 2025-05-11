@@ -3,7 +3,7 @@ import {
   CheckCircle, 
   Clock, 
   CreditCard, 
-  Refresh, 
+  RefreshCw, 
   Shield, 
   Star
 } from "lucide-react";
@@ -56,7 +56,7 @@ export function Features() {
 
               <div className="flex items-start">
                 <div className="mr-4 text-primary">
-                  <Refresh className="h-6 w-6" />
+                  <RefreshCw className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Ongoing Support</h3>
