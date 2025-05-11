@@ -9,8 +9,8 @@ export function CTA() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast({
-      title: "Thank you for subscribing!",
-      description: "We'll keep you updated with our latest news and offerings.",
+      title: "Obrigado por se inscrever!",
+      description: "Manteremos você atualizado com nossas últimas novidades e ofertas.",
     });
   };
 
@@ -18,11 +18,11 @@ export function CTA() {
     <section id="contact" className="section-padding relative overflow-hidden">
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/5 to-primary/20 rounded-3xl border border-border p-8 md:p-12">
+          <div className="bg-gradient-to-br from-primary/5 to-primary/20 rounded-3xl border border-border p-8 md:p-12 shadow-lg">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Digital Presence?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Pronto para Transformar Sua Presença Digital?</h2>
               <p className="text-lg text-muted-foreground">
-                Let's discuss how MenteSun can help your business grow.
+                Vamos discutir como a MenteSun pode ajudar seu negócio a crescer.
               </p>
             </div>
 
@@ -30,19 +30,19 @@ export function CTA() {
               <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
                 <Input 
                   type="email" 
-                  placeholder="Enter your email" 
+                  placeholder="Digite seu email" 
                   className="flex-grow" 
                   required 
                 />
-                <Button type="submit" size="lg">
-                  Get Started
+                <Button type="submit" size="lg" className="animate-pulse hover:animate-none">
+                  Começar Agora
                 </Button>
               </form>
             </div>
 
             <div className="text-center text-sm text-muted-foreground">
               <p>
-                By signing up, you agree to our Terms of Service and Privacy Policy.
+                Ao se inscrever, você concorda com nossos Termos de Serviço e Política de Privacidade.
               </p>
             </div>
           </div>

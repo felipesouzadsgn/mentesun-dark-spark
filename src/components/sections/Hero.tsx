@@ -10,24 +10,24 @@ export function Hero() {
           <div className="space-y-6 animate-fade-in">
             <div className="inline-flex items-center px-3 py-1 rounded-full border border-border bg-secondary/50 text-sm">
               <span className="bg-primary text-primary-foreground rounded-full w-4 h-4 flex items-center justify-center mr-2">✓</span>
-              <span>Transforming Ideas into Digital Solutions</span>
+              <span>Transformando Ideias em Soluções Digitais</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              We Build <span className="bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400">Digital Experiences</span> That Drive Growth
+              Nós Criamos <span className="bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-400">Experiências Digitais</span> Que Impulsionam Crescimento
             </h1>
             
             <p className="text-xl text-muted-foreground">
-              MenteSun develops custom systems, websites, landing pages, SaaS platforms, and APIs to help your business thrive in the digital world.
+              A MenteSun desenvolve sistemas personalizados, websites, landing pages, plataformas SaaS e APIs para ajudar seu negócio a prosperar no mundo digital.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="group">
-                Get Started
+                Começar Agora
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button size="lg" variant="outline">
-                Our Services
+                Nossos Serviços
               </Button>
             </div>
             
@@ -38,13 +38,13 @@ export function Hero() {
                 <div className="w-8 h-8 rounded-full bg-gray-500 dark:bg-gray-500"></div>
               </div>
               <div className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">100+</span> projects completed
+                <span className="font-semibold text-foreground">100+</span> projetos concluídos
               </div>
             </div>
           </div>
           
           <div className="relative animate-fade-in">
-            <div className="relative z-10 aspect-square md:aspect-[4/3] overflow-hidden rounded-lg border border-border bg-gradient-to-br from-secondary to-secondary/30 p-4">
+            <div className="relative z-10 aspect-square md:aspect-[4/3] overflow-hidden rounded-lg border border-border bg-gradient-to-br from-secondary to-secondary/30 p-4 shadow-lg">
               <div className="grid grid-cols-2 gap-4 h-full">
                 <div className="col-span-2 bg-background/80 border border-border rounded-md shadow-lg flex items-center justify-center p-6">
                   <div className="text-center">
@@ -53,10 +53,10 @@ export function Hero() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2z" />
                       </svg>
                     </div>
-                    <h3 className="font-medium text-lg">Digital Solutions</h3>
+                    <h3 className="font-medium text-lg">Soluções Digitais</h3>
                   </div>
                 </div>
-                <div className="bg-background/80 border border-border rounded-md shadow-lg flex items-center justify-center p-4">
+                <div className="bg-background/80 border border-border rounded-md shadow-lg flex items-center justify-center p-4 hover:shadow-md hover:border-primary/20 transition-all">
                   <div className="text-center">
                     <div className="bg-primary/10 rounded-full p-2 inline-block mb-2">
                       <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export function Hero() {
                     <h3 className="font-medium text-sm">Web</h3>
                   </div>
                 </div>
-                <div className="bg-background/80 border border-border rounded-md shadow-lg flex items-center justify-center p-4">
+                <div className="bg-background/80 border border-border rounded-md shadow-lg flex items-center justify-center p-4 hover:shadow-md hover:border-primary/20 transition-all">
                   <div className="text-center">
                     <div className="bg-primary/10 rounded-full p-2 inline-block mb-2">
                       <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

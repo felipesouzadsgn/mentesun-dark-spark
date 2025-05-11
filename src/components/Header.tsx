@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "About", href: "#about" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+  { name: "Início", href: "#home" },
+  { name: "Serviços", href: "#services" },
+  { name: "Sobre", href: "#about" },
+  { name: "Depoimentos", href: "#testimonials" },
+  { name: "Contato", href: "#contact" },
 ];
 
 export function Header() {
@@ -54,7 +54,7 @@ export function Header() {
             </a>
           ))}
           <ThemeToggle />
-          <Button>Contact Us</Button>
+          <Button>Fale Conosco</Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -88,7 +88,7 @@ export function Header() {
                 {item.name}
               </a>
             ))}
-            <Button className="w-full mt-4">Contact Us</Button>
+            <Button className="w-full mt-4">Fale Conosco</Button>
           </div>
         </div>
       )}

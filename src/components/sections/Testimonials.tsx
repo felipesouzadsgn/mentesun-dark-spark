@@ -3,21 +3,21 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Alex Johnson",
+    name: "Alexandre Silva",
     position: "CEO, TechVision",
-    content: "MenteSun transformed our business with a custom SaaS solution that streamlined our operations and reduced costs by 30%. Their team's technical expertise and attention to detail exceeded our expectations.",
+    content: "A MenteSun transformou nosso negócio com uma solução SaaS personalizada que otimizou nossas operações e reduziu custos em 30%. A expertise técnica e a atenção aos detalhes da equipe superaram nossas expectativas.",
     avatar: "A",
   },
   {
-    name: "Sarah Williams",
-    position: "Marketing Director, GrowFast",
-    content: "The landing pages MenteSun created for our campaigns have increased our conversion rates by 45%. They truly understand what drives user engagement and conversion.",
+    name: "Sara Oliveira",
+    position: "Diretora de Marketing, GrowFast",
+    content: "As landing pages criadas pela MenteSun para nossas campanhas aumentaram nossas taxas de conversão em 45%. Eles realmente entendem o que impulsiona o engajamento e a conversão dos usuários.",
     avatar: "S",
   },
   {
-    name: "Michael Brown",
+    name: "Miguel Costa",
     position: "CTO, InnovateNow",
-    content: "Working with MenteSun on our API development project was a seamless experience. Their team delivered a robust solution that integrates perfectly with our existing systems.",
+    content: "Trabalhar com a MenteSun em nosso projeto de desenvolvimento de API foi uma experiência perfeita. A equipe entregou uma solução robusta que se integra perfeitamente aos nossos sistemas existentes.",
     avatar: "M",
   },
 ];
@@ -27,15 +27,15 @@ export function Testimonials() {
     <section id="testimonials" className="bg-secondary section-padding">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">O Que Nossos Clientes Dizem</h2>
           <p className="text-lg text-muted-foreground">
-            Don't just take our word for it - hear from some of our satisfied clients.
+            Não acredite apenas em nossa palavra - veja o que alguns de nossos clientes satisfeitos têm a dizer.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-background border border-border">
+            <Card key={index} className="bg-background border border-border hover:shadow-lg transition-all hover:border-primary/20">
               <CardContent className="pt-6">
                 <div className="flex flex-col h-full">
                   <div className="mb-4">
@@ -45,7 +45,7 @@ export function Testimonials() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-6 flex-grow">"{testimonial.content}"</p>
+                  <p className="text-muted-foreground mb-6 flex-grow italic">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 rounded-full bg-primary/15 text-primary flex items-center justify-center font-semibold mr-3">
                       {testimonial.avatar}
