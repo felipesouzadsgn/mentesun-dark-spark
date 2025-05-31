@@ -27,43 +27,58 @@ export function Header() {
     };
   }, []);
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg shadow-sm"
+          ? "bg-background/90 backdrop-blur-lg shadow-lg border-b border-border/50"
           : "bg-transparent"
       }`}
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 lg:h-20 items-center justify-between">
         <div className="flex items-center">
-          <a href="#" className="text-xl font-bold">
+          <a href="#" className="text-xl sm:text-2xl font-bold hover:scale-105 transition-transform duration-200">
             Mente<span className="text-primary">Sun</span>
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-8">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.name}
-              href={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => scrollToSection(item.href)}
+              className="text-sm font-medium hover:text-primary transition-colors duration-200 relative group"
             >
               {item.name}
-            </a>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            </button>
           ))}
           <ThemeToggle />
-          <Button>Fale Conosco</Button>
+          <Button 
+            onClick={() => scrollToSection('#contact')} 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Fale Conosco
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-4 md:hidden">
+        <div className="flex items-center space-x-3 lg:hidden">
           <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="relative"
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -76,19 +91,23 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background border-t">
-          <div className="container py-4 space-y-4">
+        <div className="lg:hidden bg-background/95 backdrop-blur-lg border-b border-border/50 shadow-lg">
+          <div className="container py-6 space-y-4">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="block text-sm font-medium hover:text-primary transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => scrollToSection(item.href)}
+                className="block w-full text-left text-base font-medium hover:text-primary transition-colors py-2 px-4 hover:bg-secondary/50 rounded-lg"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
-            <Button className="w-full mt-4">Fale Conosco</Button>
+            <Button 
+              onClick={() => scrollToSection('#contact')} 
+              className="w-full mt-4 bg-primary hover:bg-primary/90"
+            >
+              Fale Conosco
+            </Button>
           </div>
         </div>
       )}
