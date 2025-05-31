@@ -1,13 +1,12 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Globe, Layout, Layers, Smartphone, Database } from "lucide-react";
+import { Code, Globe, Layout, Layers, Smartphone, Database, Palette, Search } from "lucide-react";
 
 const services = [
   {
-    icon: <Code className="h-8 w-8" />,
-    title: "Desenvolvimento de Software",
-    description: "Soluções de software personalizadas projetadas para otimizar suas operações e agilizar processos.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
+    icon: <Palette className="h-8 w-8" />,
+    title: "Design UI/UX",
+    description: "Criamos interfaces intuitivas e experiências de usuário envolventes que convertem visitantes em clientes.",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop",
   },
   {
     icon: <Globe className="h-8 w-8" />,
@@ -28,15 +27,15 @@ const services = [
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
   },
   {
-    icon: <Database className="h-8 w-8" />,
-    title: "Desenvolvimento de API",
-    description: "Soluções robustas de API que conectam seus sistemas e permitem troca de dados sem problemas.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop",
+    icon: <Search className="h-8 w-8" />,
+    title: "SEO & Marketing Digital",
+    description: "Otimização para mecanismos de busca e estratégias digitais para aumentar sua visibilidade online.",
+    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400&h=250&fit=crop",
   },
   {
     icon: <Smartphone className="h-8 w-8" />,
-    title: "Aplicações Móveis",
-    description: "Aplicativos móveis nativos e multiplataforma que ampliam seu alcance para usuários móveis.",
+    title: "Design Responsivo",
+    description: "Designs que se adaptam perfeitamente a todos os dispositivos, garantindo uma experiência consistente.",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop",
   },
 ];
